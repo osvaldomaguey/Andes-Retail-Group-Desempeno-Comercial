@@ -44,7 +44,9 @@ Tamaño: 8,500 registros de ventas
 
 ## 🛠️ Metodología
 Limpieza de datos.
+
 Transformación en Power Query.
+
 Herramientas Utilizadas: *Power BI Desktop o Tableau, Visualizaciones nativas (barras, líneas, mapas, tarjetas KPI), Modelo de narrativa SQCA.*
 
 ## 🔄 Etapas del Análisis
@@ -71,26 +73,28 @@ Un reporte de rentabilidad y retención que combina:
 ✅ Implicaciones de negocio accionables
 
 ### **📊 Resultado del Análisis**
-- El tipo de propiedad que genera mayor revenue son las casas con $2.24 mil millones (37.3% del total).
-- La ciudad con mayor volumen de ventas es Ciudad de México con 53.92% de participación.
-- El canal de venta más eficiente en términos de ingresos son los corredores con 72.85% de participación.
-- El negocio registró un crecimiento del 14.28% en 2024 vs 2023.
-- Las ventas muestran patrones estacionales con picos en marzo-abril y septiembre-noviembre.
-- Las ventas muestran un crecimiento sostenido del 14.28% YoY.
-- Los corredores generan 2.7 veces más ingresos que las ventas directas.
+- Se identifica un patrón de ventas claramente estacional, con picos en verano (diciembre-enero) y caídas pronunciadas en invierno (junio-agosto).
+- Se observa una disminución general de ingresos de 2024 a 2025.
+- Existe una revés en el comportamiento de compra: en verano dominan las ventas altas (≥1,000), y durante otoño, primavera e invierno aumentan las ventas bajas (<$1,000).
 
 ## **🖋 Conclusiones y recomendaciones**
-- Priorizar la comercialización de propiedades tipo comercial por su alto ticket promedio ($1.79M).
-- Fortalecer el canal de corredores que presenta mayor participación en el revenue (72.85%).
-- Implementar estrategias de upselling para clientes primerizos hacia propiedades de mayor valor.
-- Desarrollar campañas estacionales aprovechando los picos de marzo-abril y septiembre-noviembre.
-- Crear programas de fidelización para el segmento de inversionistas (24.47%) con potencial de recompra.
-- Optimizar la eficiencia de costos en el canal de corredores manteniendo su efectividad comercial.
+Se identificó una doble problemática:
+- Estacionalidad esperada: Picos en verano (dic-ene) y caídas en invierno (jun-ago)
+- Tendencia decreciente: Disminución general de ingresos de 2024 a 2025.
+
+Analizando los datos se descubrieron los siguientes hallazgos por segmento de cliente:
+- Clientes Premium y Estándar: Aportan mayor valor, y comportamiento similar en las diferentes épocas del año.
+- Clientes Económico: Segmento con mayor potencial sin explotar.
+
+Se recomienda
+• Activar segmento Económico durante todo el año
+• Estrategias específicas para mantener ventas altas en temporadas frías
+• Enfoque en Electrónica y Deportes (categorías líderes)
 
 ## ▶ Cómo abrir el notebook en Google Colab
 
 Haz clic en el siguiente botón:
-[Google Colab](https://colab.research.google.com/drive/1AeliHUxdl8CC2TGrKDZelCq_pRMMwOKm?usp=sharing)
+[Google Colab](https://colab.research.google.com/drive/1oIXoxRuottmAUMYMLIrVUlYH0fOTfCCE?usp=sharing)
 
 ## 📘 Cómo reproducir el análisis
 
