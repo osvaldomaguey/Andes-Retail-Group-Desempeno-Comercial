@@ -23,34 +23,28 @@ El análisis realizado se llevo a cabo en Power BI en 5 etapas: Calidad de datos
 ## 📋 Objetivos
 Realizar una limpieza adecuada de los datos para garantizar la validez de los mismos en los análisis posteriores.
 Identificar KPIs relevantes para las preguntas de negocio.
-Creación de medidas DAX.
+Creación de medidas con DAX.
 Comunicar los hallazgos en un dashboard en Power BI
 
 ## 🗂️ Dataset
 Fuente: Andes_Retail_Group_2024_2025.csv
 Tamaño: 8,500 registros de ventas
 
-Fuente: dim_clientes.csv
-Tamaño: 3,500 registros de clientes
-
-Fuente: dim_propiedades.csv
-Tamaño: 8,000 registros de propiedades
-
 ## **Variables Analizadas**
 | Variable | Tipo | Descripción |
 |---------|-------------|-------------------|
-| precio_venta	| Numérica | Precio final de venta de la propiedad |
-| monto_comision | Numérica |	Monto de comisión generado por la venta |
-| ciudad | Categórica	| Ciudad donde se realizó la venta |
-| tipo_propiedad	| Categórica	| Tipo de propiedad vendida |
-| segmento_comprador | Categórica | Tipo o perfil del comprador |
+| unidades_vendidas	| Numérica | Cantidad de unidades vendidas |
+| ingresos | Numérica |	Total vendido (precio × unidades) |
+| pais | Categórica	| País donde se realizó la venta |
+| estacion	| Categórica	| Temporada del año según el hemisferio sur|
+| segmento_cliente | Categórica | Tipo de cliente según valor comercial |
 | canal_venta	| Categórica	| Canal utilizado para la venta |
-| tipo_propiedad | Categórica	| Tipo de propiedad |
-| fecha_venta	| Fecha	| Fecha en que se realizó la venta |
+| categoria_producto | Categórica	| Tipo de producto vendido |
+| fecha_pedido	| Fecha	| Fecha en que se realizó la venta |
 
 ## 🛠️ Metodología
 Limpieza de datos.
-Modelado de datos.
+Transformación en Power Query.
 Herramientas Utilizadas: *Power BI Desktop o Tableau, Visualizaciones nativas (barras, líneas, mapas, tarjetas KPI), Modelo de narrativa SQCA.*
 
 ## 🔄 Etapas del Análisis
@@ -58,23 +52,22 @@ Este proyecto sigue un flujo estructurado de análisis dividido en 5 etapas prin
 
 | Etapa	 | Descripción | Resultado Esperado |
 |---------|-------------|-------------------|
-| 1. Exploración y limpieza | Cargar y explorar el dataset | Entender estructura, columnas, tipos, métricas clave, corregir formatos, valores nulos y eliminar duplicados |
-| 2. Creación de tabla de calendario | Se creó el la tabla dim_fecha | Calcular KPIs y cohortes de retención | 
-| 3. Modelado de datos | Crear el modelo estrella, y definir las relaciones adecuadas entre tablas | Tener un modelo que pueda calcular medidas DAX y KPIs sin presentar errores de ejecución o de cálculo |
-| 4. Creacion de medidas y cohortes | Calcular medidas qué contesten las preguntas de negocio | Entender el desempeño del negocio y el comportamiento del cliente a lo largo del tiempo |
-| 5. Visualización | Crear visualizaciones |	Dashboard interactivo en Power BI |
+| 1. Calidad de datos | Cargar y explorar el dataset | Entender estructura, columnas, tipos, métricas clave |
+| 2. Tranformación con Power Query | Preparar los datos para el análisis | Estándarizar formatos, corregirr tipo de datos y crear columnas descriptivas | 
+| 3. Diseño y planificación del Dashboard | Escoger KPIs y gráficos que resuelvan preguntas de negocio | Tener filtrada la información relevante para stakeholders|
+| 4. Crear visualizaciones | Diseñar el dashboard | Tener un dashboard interactivo  con jerarquía visual y fácil de leer |
+| 5. Narrativa con Modelo SCQA | Realizar una narrativa ejecutiva clara y breve |	Un mensaje que refuerza lo mostrado en el dashboard |
  
 ### 🎯 Enfoque del Análisis
-Naturaleza: Descriptivo (KPIs de negocio) y Exploratorio (cohortes)
-Variable objetivo: Revenue y profit, y Tasa de retención mensual
-Tipos de relaciones analizadas: Comportamiento del usuario por tipo de cliente, ingresos por tipo de propiedad, Actividad anual y mensual por cohorte de registro.
+Naturaleza: Descriptivo (KPIs de negocio)
+Variable objetivo: Revenue y profit, tipo de cliente y categoría de producto
+Tipos de relaciones analizadas: Comportamiento del usuario por tipo de cliente, ingresos por categoría de producto y país, y comparativo de ingresos YoY.
 
 ### 🗂 Producto Final
 Un reporte de rentabilidad y retención que combina:
 
 ✅ Evidencia visual (Dashboard interactivo en PowerBI)
 ✅ Evidencia numérica (KPIs de performance)
-✅ Retención por cohortes
 ✅ Implicaciones de negocio accionables
 
 ### **📊 Resultado del Análisis**
